@@ -12,6 +12,9 @@ public class Main {
         Library library = new Library(System.out);
         library.addBook(book1);
         library.addBook(book2);
-        library.printAllBookDetails();
+
+        Menu menu = new Menu(System.out);
+        menu.displayOptions();
+        menu.promptUser();
     }
 }

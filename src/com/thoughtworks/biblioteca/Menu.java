@@ -1,27 +1,22 @@
 package com.thoughtworks.biblioteca;
 
+import java.io.IOException;
 import java.io.PrintStream;
 
-/**
- * Created by hyoo on 3/4/15.
- */
 public class Menu {
 
     private PrintStream printStream;
+    private Library library;
 
-    public Menu(PrintStream printStream) {
+    public Menu(PrintStream printStream, Library library) {
         this.printStream = printStream;
+        this.library = library;
     }
 
-    public void displayOptions() {
+    public void promptUser() throws IOException {
         printStream.println("1. List Books");
+        printStream.println("Please Pick an Option:");
+        library.printAllBookDetails();
     }
 
-    public void promptUser() {
-        printStream.println("Please Pick an Option");
-    }
-
-    public int receiveUserInput(String userInput) {
-        return (int) userInput;
-    }
 }

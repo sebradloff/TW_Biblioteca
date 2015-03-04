@@ -1,2 +1,2 @@
-/src/com/thoughtworks/biblioteca/*.class
-/.idea
+*.class
+.idea/

@@ -1,10 +1,9 @@
 package com.thoughtworks.biblioteca;
 
-/**
- * Created by sradloff on 3/3/15.
- */
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Welcome welcome = new Welcome(System.out);
         welcome.display();
         Book book1 = new Book("TDD", "Kent Beck", 2000, System.out);
@@ -13,8 +12,8 @@ public class Main {
         library.addBook(book1);
         library.addBook(book2);
 
-        Menu menu = new Menu(System.out);
-        menu.displayOptions();
+        Menu menu = new Menu(System.out, library);
+
         menu.promptUser();
     }
 }

@@ -32,7 +32,7 @@ public class LibraryTest {
         library.addBook(book3);
 
         library.printAllBookDetails();
-dsvdvsd
+
         verify(printStream).println("Title | Author | Year Published");
         verify(printStream).println("Book Title1 | Author1 | 2001");
         verify(printStream).println("Book Title2 | Author2 | 2002");
